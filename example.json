@@ -1,0 +1,12 @@
+//components.json
+{
+  "_graphicExpand": {
+    "_isEnabled": true,
+    "_button": {
+      "buttonText": "",
+      "ariaLabel": "",
+      "iconClass": "icon-expand_1"
+    },
+    "_selector": ""
+  }
+}

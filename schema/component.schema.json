@@ -1,0 +1,57 @@
+{
+  "$anchor": "graphicExpand-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$patch": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "properties": {
+        "_graphicExpand": {
+          "type": "object",
+          "title": "Graphic Expand",
+
+          "properties": {
+            "_isEnabled": {
+              "type": "boolean",
+              "title": "Enable Graphic Expand",
+              "description": "Set to true to enable.",
+              "default": false
+            },
+            "_selector": {
+              "type": "string",
+              "title": "Selector",
+              "description": "Selector for the element to expand",
+              "default": ""
+            },
+            "_button": {
+              "type": "object",
+              "title": "Button",
+              "properties": {
+                "buttonText": {
+                  "type": "string",
+                  "title": "Text",
+                  "description": "",
+                  "default": ""
+                },
+                "ariaLabel": {
+                  "type": "string",
+                  "title": "Aria Label",
+                  "description": "",
+                  "default": ""
+                },
+                "iconClass": {
+                  "type": "string",
+                  "title": "Icon class",
+                  "description": "",
+                  "default": "icon-expand_1"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

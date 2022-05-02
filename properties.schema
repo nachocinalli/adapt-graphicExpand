@@ -1,0 +1,77 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"required": false,
+	"properties": {
+		"pluginLocations": {
+			"type": "object",
+			"required": true,
+			"properties": {
+				"component": {
+					"type": "object",
+					"properties": {
+						"_graphicExpand": {
+							"type": "object",
+							"required": false,
+							"legend": "Graphic Expand",
+							"properties": {
+								"_isEnabled": {
+									"type": "boolean",
+									"required": false,
+									"title": "Enable Graphic Expand",
+									"inputType": "Checkbox",
+									"validators": [],
+									"help": "Set to true to enable."
+								},
+                "_selector": {
+										"type": "string",
+										"required": false,
+										"title": "Selector",
+										"default": "",
+										"inputType": "Text",
+										"validators": [],
+                    "help": "Selector for the element to expand"
+									},
+								"_button": {
+									"type": "object",
+									"required": false,
+									"legend": "Button",
+									"properties": {
+										"buttonText": {
+											"type": "string",
+											"required": false,
+											"title": "Text",
+											"default": "",
+											"inputType": "Text",
+											"validators": [],
+											"translatable": true
+										},
+										"ariaLabel": {
+											"type": "string",
+											"required": false,
+											"title": "Aria Label",
+											"default": "",
+											"inputType": "Text",
+											"validators": [],
+											"translatable": true
+										},
+										"iconClass": {
+											"type": "string",
+											"required": false,
+											"title": "Icon Class",
+											"default": "icon-expand_1",
+											"inputType": "Text",
+											"validators": []
+										}
+									}
+									
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

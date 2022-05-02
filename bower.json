@@ -1,0 +1,14 @@
+{
+  "name": "adapt-graphicExpand",
+  "version": "1.0.0",
+  "framework": ">=5.14.0",
+  "displayName": "Graphic Expand",
+  "extension": "graphicExpand",
+  "description": "An extension to allow the learner to expand a graphic to full screen",
+  "main": "/js/adapt-graphicExpand.js",
+  "homepage": "https://github.com/nachocinalli/adapt-graphicExpand",
+  "bugs": "https://github.com/nachocinalli/adapt-graphicExpand/issues",
+  "keywords": ["adapt-plugin", "adapt-extension"],
+  "license": "GPLv3",
+  "targetAttribute": "_graphicExpand"
+}
