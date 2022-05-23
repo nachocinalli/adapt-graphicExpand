@@ -1,4 +1,5 @@
 import Adapt from 'core/js/adapt';
+import notify from 'core/js/notify';
 import { templates } from 'core/js/reactHelpers';
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -27,11 +28,17 @@ class GraphicExpandView extends Backbone.View {
   onClick(event) {
     event.preventDefault();
     const $graphicexpand = $(event.currentTarget);
+ 
     const $img = $graphicexpand.parent().parent().find('img');
-    const imgsrc = $img.attr('data-large') || $img.attr('src');
-    if (imgsrc === undefined) return;
-
-    Adapt.notify.popup({
+    let imgsrc = $img.attr('data-large') || $img.attr('src');
+    if (imgsrc === undefined) {
+      const imgsrcLottie = $graphicexpand.parent().parent().find('div[data-graphiclottie="true"]')
+      if (imgsrcLottie.length > 0) {
+        imgsrc = imgsrcLottie.attr('src')
+      }
+    };
+    if(imgsrc === undefined) return;
+    notify.popup({
       _type: 'popup',
       title: '',
       body: '<img src="' + imgsrc + '" />',
